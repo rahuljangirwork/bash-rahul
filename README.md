@@ -1,4 +1,4 @@
-# ChrisTitusTech's `.bashrc` Configuration
+# Rahul's `.bashrc` Configuration
 
 ## Overview
 
@@ -22,28 +22,36 @@ This repository provides a comprehensive `.bashrc` configuration along with supp
 To install the `.bashrc` configuration, execute the following commands in your terminal:
 
 ```sh
-git clone --depth=1 https://github.com/dacrab/mybash.git
-cd mybash
+git clone --depth=1 https://github.com/rahuljangirwork/bash-rahul.git
+cd bash-rahul
 ./setup.sh
 ```
 
-The `setup.sh` script automates the installation process by:
+The setup process automates the installation by:
 
-- Creating necessary directories (`linuxtoolbox/mybash`)
+- Creating necessary directories (`bash-rahul`)
 - Cloning the repository
 - Installing dependencies (bash-completion, neovim, starship, fzf, zoxide)
 - Installing the MesloLGS Nerd Font required for the prompt
-- Linking configuration files (`.bashrc` and `starship.toml`) to your home directory
+- Linking configuration files (`.bashrc` and `starship.toml`) to your home directory (backups created in `~/.bash-rahul-backups`)
 - Setting up additional utilities like `fastfetch`
 
 Ensure you have the required permissions and a supported package manager before running the script.
+
+## Testing
+
+To verify the configuration is working correctly, you can run the test script:
+
+```sh
+./tests/test_config.sh
+```
 
 ## Uninstallation
 
 To uninstall the `.bashrc` configuration, run:
 
 ```sh
-cd mybash
+cd bash-rahul
 chmod +x uninstall.sh
 ./uninstall.sh
 ```
@@ -53,7 +61,7 @@ The `uninstall.sh` script reverses the installation process by:
 - Removing installed dependencies
 - Uninstalling fonts
 - Removing symbolic links to configuration files
-- Deleting the `linuxtoolbox` directory
+- Deleting the `bash-rahul` directory
 - Cleaning up additional utilities like `starship`, `fzf`, and `zoxide`
 
 After running the script, it's recommended to restart your shell to apply the changes.

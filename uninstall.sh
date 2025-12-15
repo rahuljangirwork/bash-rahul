@@ -6,7 +6,7 @@ RED=$(tput setaf 1)
 YELLOW=$(tput setaf 3)
 GREEN=$(tput setaf 2)
 
-LINUXTOOLBOXDIR="$HOME/linuxtoolbox"
+LINUXTOOLBOXDIR="$HOME/.bash-rahul"
 PACKAGER=""
 SUDO_CMD=""
 
@@ -135,11 +135,11 @@ remove_configs() {
     print_colored "$GREEN" "Configuration files removed"
 }
 
-remove_linuxtoolbox() {
+remove_bash_rahul() {
     if [ -d "$LINUXTOOLBOXDIR" ]; then
-        print_colored "$YELLOW" "Removing linuxtoolbox directory..."
+        print_colored "$YELLOW" "Removing bash-rahul directory..."
         rm -rf "$LINUXTOOLBOXDIR"
-        print_colored "$GREEN" "linuxtoolbox directory removed"
+        print_colored "$GREEN" "bash-rahul directory removed"
     fi
 }
 
@@ -151,6 +151,6 @@ uninstall_font
 uninstall_starship_and_fzf
 uninstall_zoxide
 remove_configs
-remove_linuxtoolbox
+remove_bash_rahul
 
 print_colored "$GREEN" "Uninstallation complete. Please restart your shell for changes to take effect."
